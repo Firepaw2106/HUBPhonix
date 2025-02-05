@@ -37,16 +37,20 @@ header{
     align-content: center;
     width: 100%;
     height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
-#navContainer{
+/* #navContainer{
     
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 2%;
-}
+} */
 
 button{
     background: none;
@@ -88,13 +92,23 @@ div{
     flex-direction: column;
     cursor: pointer;
 }
+
+.toggle-meny{
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
 .bar{
     display: block;
-    background-color: #0A97D9;
-    width: 40px;
-    height: 8px;
+    background-color: #F1F1F1;
+    width: 30px;
+    height: 4px;
     border-radius: 40px;
     margin: 5px;
+}
+input[type="checkbox"]:checked ~ #navbar{
+    left: 0;
 }
 
 
@@ -105,12 +119,20 @@ div{
         top: 20px;
         right: 5%;  
     }
-    #navContainer{
+    .hamburgerToggle{
+        opacity: 0;
+    }
+    .toggle-meny{
+        display: block;
         position: fixed;
-        background-color: #F1F1F1;
+        top: 30px;
+        right: 8%;  
+    }
+    #navbar{
+        position: fixed;
         opacity: 90%;
         top: 0;
-        right: -100%;
+        right:-100%;
         height: 100vh;
         width: min(10em,100%);
         z-index: 11;
@@ -118,13 +140,7 @@ div{
         gap: 10%;
     } 
 
-    #navContainer button{
-        color: #000000; 
-    }
-
-    .active{
-        left: 100%;
-   }
+   
 } 
 
 
