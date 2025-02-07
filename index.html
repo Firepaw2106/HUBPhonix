@@ -10,18 +10,14 @@
 
     <header>
         <img src="style/HUB PHØNIX LOGO Farge-Hvit.png" alt="">
-        
+        <div id="hamburger" onclick="toggleMeny()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
     </header>
-    <nav id="navbar">
-        <div class="toggle-meny">
-            <input type="checkbox" class="hamburgerToggle">
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-         </div>
-    
+    <nav id="navbar" class="active">
+        
         <button id="HomeButton">Hjem</button>
         <button id="ServicesButton">Tjenester og Aktiviteter</button>
         <button id="BookingButton">Book Rom</button>
@@ -43,6 +39,11 @@
         <div><b>Adresse</b></div>
     </div>
     <footer>copyright</footer>
+
+    <!-- main -->
+     <script src="main.js"></script>
+     <script src="control.js"></script>
+     <script src="view.js"></script>
     
     <!-- MainPage -->
     <script src="Script/Pages/MainPage/MainPageView.js"></script>
